@@ -1,26 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
+.search {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#user-info img {
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+img {
     max-width: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-#repos-list {
-    list-style-type: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-#repos-list li {
     margin-bottom: 10px;
 }

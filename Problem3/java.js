@@ -2,6 +2,9 @@ function getInfo() {
     const username = document.getElementById('username').value;
     const apiUrl = `https://api.github.com/users/${username}`;
 
+    const reposList = document.getElementById('repos');
+    reposList.innerHTML = '';
+
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
@@ -17,7 +20,6 @@ function getInfo() {
                 <h3>Repositories:</h3>
             `;
 
-            const reposList = document.getElementById('repos');
             fetch(data.repos_url)
                 .then(response => response.json())
                 .then(repos => {
@@ -32,6 +34,5 @@ function getInfo() {
             console.error('Error:', error);
             const userInfo = document.getElementById('user');
             userInfo.innerHTML = 'Error: User not available.';
-            document.getElementById('repos-list').innerHTML = '';
         });
 }
