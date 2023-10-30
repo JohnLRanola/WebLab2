@@ -2,6 +2,7 @@ let insertHeaderRow = true;
 
 function createContact() {
     let isValid = validate();
+    let errorMessage = document.getElementById("error");
     if (isValid) {
         if (insertHeaderRow) {
             createHeaders();
@@ -19,6 +20,7 @@ function createContact() {
         row.insertCell(-1).appendChild(document.createTextNode(email));
 
         document.getElementById("contact").reset();
+        errorMessage.style.display = "none";
     } else {
         errorMessage.style.display = "block";
     }
@@ -29,7 +31,7 @@ function validate() {
     let name = document.getElementById('name').value.trim();
     let phone = document.getElementById('phone').value.trim();
     let email = document.getElementById('email').value.trim();
-    let errorMessage = document.getElementById("errorMessage");
+    let errorMessage = document.getElementById("error");
     errorMessage.style.display = "hidden";
 
     let nameRegex = /^[A-Za-z]+$/;
