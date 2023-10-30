@@ -67,3 +67,10 @@ function filter(sortByElement) {
     rows.forEach(row => tableBody.appendChild(row));
 }
 
+function filterName() {
+    filter(0);
+}
+
+function filterPhone() {
+    filter(1);
+}
