@@ -52,3 +52,18 @@ function createHeaders() {
     row.insertCell(-1).innerHTML = "<b>Phone</b>";
     row.insertCell(-1).innerHTML = "<b>Email</b>";
 }
+
+function filter(sortByElement) {
+    let tableBody = document.getElementById("contactTable");
+    let rows = Array.from(tableBody.rows).slice(1); 
+    rows.sort((a, b) => {
+        let aText = a.cells[sortByElement].textContent.toLowerCase();
+        let bText = b.cells[sortByElement].textContent.toLowerCase();
+        return aText.localeCompare(bText);
+    });
+
+    tableBody.innerHTML = "";
+    tableBody.appendChild(tableBody.rows[0]); 
+    rows.forEach(row => tableBody.appendChild(row));
+}
+
