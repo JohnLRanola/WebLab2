@@ -81,14 +81,24 @@ function phoneSearch() {
     let input = document.getElementById("myInput").value.trim().toUpperCase();
     let tableBody = document.getElementById("contactTable");
     let rows = tableBody.rows;
+    let noResultMessage = document.getElementById("noResult");
+
+    let hasResults = false;
 
     for (let index = 1; index < rows.length; index++) {
         let text = rows[index].getElementsByTagName("TD")[1];
         let txtValue = text.textContent || text.innerText;
         if (txtValue.toUpperCase().indexOf(input) > -1) {
             rows[index].style.display = "";
+            hasResults = true;
         } else {
             rows[index].style.display = "none";
         }
+    }
+
+    if (!hasResults) {
+        noResultMessage.style.display = "block";
+    } else {
+        noResultMessage.style.display = "none";
     }
 }
