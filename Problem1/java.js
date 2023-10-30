@@ -8,7 +8,7 @@ function createContact() {
             insertHeaderRow = false;
         }
 
-        let tableBody = document.getElementById('myTable');
+        let tableBody = document.getElementById('contactTable');
         let name = document.getElementById('name').value;
         let phone = document.getElementById('phone').value;
         let email = document.getElementById('email').value;
@@ -73,4 +73,20 @@ function filterName() {
 
 function filterPhone() {
     filter(1);
+}
+
+function phoneSearch() {
+    let input = document.getElementById("myInput").value.trim().toUpperCase();
+    let tableBody = document.getElementById("contactTable");
+    let rows = tableBody.rows;
+
+    for (let index = 1; index < rows.length; index++) {
+        let text = rows[index].getElementsByTagName("TD")[1];
+        let txtValue = text.textContent || text.innerText;
+        if (txtValue.toUpperCase().indexOf(input) > -1) {
+            rows[index].style.display = "";
+        } else {
+            rows[index].style.display = "none";
+        }
+    }
 }
