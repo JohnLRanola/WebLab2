@@ -44,3 +44,11 @@ function validate() {
     errorMessage.style.display = "hidden";
     return true;
 }
+
+function createHeaders() {
+    let tableBody = document.getElementById('contactTable');
+    let row = tableBody.insertRow(-1);
+    row.insertCell(-1).innerHTML = "<b>Name</b>";
+    row.insertCell(-1).innerHTML = "<b>Phone</b>";
+    row.insertCell(-1).innerHTML = "<b>Email</b>";
+}
