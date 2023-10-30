@@ -7,6 +7,45 @@
 </head>
 
 <body>
+    <br>
+    <h1>Phone Directory</h1>
+    <br>
+
+    <div id="add" class="addGrid">
+        <form id="contactForm" action="#" >
+            <div>
+                <label>
+                    <input type="text" name="name" id="name" placeholder="Contact Name"/>
+                </label>
+
+                <label>
+                    <input type="tel" name="mobile" id="mobile" placeholder="Mobile Number"/>
+                </label>
+
+                <label>
+                    <input type="email" name="email" id="email" placeholder="Email"/>
+                </label>
+
+                <input name="submit" type="button" value="Add Contact" onclick="createUser();"/>                   
+            </div>
+        </form>
+    </div>
+
+    <div id="search" class="addGrid">
+        <h1>Search Contacts</h1>
+
+         Search contact by Mobile No:
+
+        <input type="text" class="search_field" name="search" id="myInput" onkeyup="Search()"/>
+    </div>
+
+    <table id="table">
+    </table>
+
+    <div id="errorMessage">User Input Invalid</div>
+    <div id="noResult">User search returned empty</div>
+
+    <script src="Assets/JavaScript/java.js"></script>
 
 </body>
 
