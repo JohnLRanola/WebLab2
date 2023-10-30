@@ -7,3 +7,64 @@
 {  
     display: none;
 }    
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.addContactPanel {
+    margin-bottom: 20px;
+}
+
+.addContactPanel form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.addContactPanel form input[type="text"],
+.addContactPanel form input[type="tel"],
+.addContactPanel form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.addContactPanel form input[type="button"] {
+    width: auto;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.addContactPanel form input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+.search_field {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
